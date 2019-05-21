@@ -1,0 +1,10 @@
+<h1> hey </h1>
+<%= link_to "Create Appointment", user_appointments_path(@user), class: "ui blue button"%>
+<ul>
+    <%= @appointments.each do |user|%>
+        <li>
+            <%= link_to user.first_name, user_path %>
+        </li>
+<% end %>
+
+</ul>

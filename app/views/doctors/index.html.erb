@@ -1,0 +1,13 @@
+<h1>Doctors</h1>
+<%=link_to 'Add Doctor', new_doctor_path %>
+<hr />
+<hr />
+
+<ul>
+    <% @doctors.each do |x|%>
+
+    <li>
+        <%= link_to x.name, x %>
+    </li>
+        <%end%>
+</ul>

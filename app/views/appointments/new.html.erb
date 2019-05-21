@@ -1,0 +1,10 @@
+<h1>Add Appointment</h1>
+<%= form_with(model: [@doctor, @appointment], local: true, class: "ui form" ) do |f| %>
+  <%= f.label :user %>
+  <%= f.select :user_id, @users.collect { |u| [u.full_name, u.id] } %>
+  <br />
+  <%= f.label :doctor %>
+  <%= f.select :doctor_id, @doctors.collect { |u| [u.name, u.id] } %>
+ 
+  <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>
